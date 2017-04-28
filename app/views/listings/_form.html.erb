@@ -1,0 +1,97 @@
+<%= form_for(listing) do |f| %>
+  <% if listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :host_id %>
+    <%= f.text_field :host_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :long %>
+    <%= f.text_field :long %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lat %>
+    <%= f.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_code %>
+    <%= f.text_field :country_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_ %>
+    <%= f.text_field :max_ %>
+  </div>
+
+  <div class="field">
+    <%= f.label :guests %>
+    <%= f.number_field :guests %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rooms %>
+    <%= f.number_field :rooms %>
+  </div>
+
+  <div class="field">
+    <%= f.label :beds %>
+    <%= f.number_field :beds %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shared %>
+    <%= f.check_box :shared %>
+  </div>
+
+  <div class="field">
+    <%= f.label :min_n %>
+    <%= f.text_field :min_n %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ights %>
+    <%= f.number_field :ights %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
